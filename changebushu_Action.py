@@ -25,6 +25,7 @@ def login(user, password):
     }
     r1 = requests.post(url1, data=data1, headers=headers, allow_redirects=False)
     location = r1.headers["Location"]
+    print(r1.text)
     try:
         code = get_code(location)
     except:
@@ -43,6 +44,7 @@ def login(user, password):
         "third_name": "huami_phone",
     }
     r2 = requests.post(url2, data=data2, headers=headers).json()
+    print(r2.text)
     login_token = r2["token_info"]["login_token"]
     print("login_token获取成功")
     userid = r2["token_info"]["user_id"]
