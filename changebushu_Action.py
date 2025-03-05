@@ -12,6 +12,7 @@ def get_code(location):
 
 
 def login(user, password):
+    print("Start loging")
     url1 = "https://api-user.huami.com/registrations/+86" + user + "/tokens"
     headers = {
         "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
