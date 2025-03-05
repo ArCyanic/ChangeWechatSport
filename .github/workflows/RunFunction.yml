@@ -11,10 +11,10 @@ jobs:
     if: true
     steps:
     - name: checkout
-      uses: ArCyanic/checkout@v2
+      uses: actions/checkout@v2
       
     - name: Set up Python 3.9
-      uses: ArCyanic/setup-python@v1
+      uses: actions/setup-python@v1
       with:
         python-version: 3.9
         
