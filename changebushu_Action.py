@@ -57,6 +57,7 @@ def main():
     login_token = 0
     login_token, userid = login(user, password)
     if login_token == 0:
+        print("{} {}".format(user, password))
         print("登陆失败")
         return "login fail"
 
